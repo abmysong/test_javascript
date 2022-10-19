@@ -17,5 +17,14 @@ const join = function(form) {
   axios.post('http://localhost:3000/api/members/join', {
     id: form['id'].value,
     password: form['password'].value
+  }).then(function(response) {
+    alert('정상적으로 생성되었습니다.');
+    window.location.href = "/";
+  }).catch(function(error) {
+    if (error.response.data.sqlMessage.includes('Duplicate entry')) {
+      alert('동일한 ID가 존재합니다.');
+    } else {
+      alert('서버와 통신중 에러가 발생 하였습니다.');
+    }
   });
 };
