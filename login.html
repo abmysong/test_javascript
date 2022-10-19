@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/login.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/login.js"></script>
 </head>
 <body>
@@ -91,11 +92,11 @@
     <section>
       <div class="section_wrap">
         <div class="inner">
-          <form method="get">
+          <form onsubmit="event.preventDefault(); login(this);">
             <div class="login_wrap">
               <p>회원로그인</p>
-              <input type="text" placeholder="아이디"><br>
-              <input type="text" placeholder="비밀번호"><br>
+              <input type="text" name="id" placeholder="아이디"><br>
+              <input type="text" name="password" placeholder="비밀번호"><br>
               <button>로그인</button>
               <p>회원이 아니시라면?</p>
               <a href="./join.html">회원가입</a>
