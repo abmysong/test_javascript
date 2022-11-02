@@ -30,3 +30,21 @@ const login = function(form) {
     alert(error.response.data.message);
   });
 };
+
+const loginCheck = function() {
+  axios.get('http://localhost:3000/api/members/login').then(function(response) {
+    console.log(response.data);
+    document.getElementById('login-name').innerHTML = response.data.decoded.id;
+    document.getElementsByClassName('introduce')[1].style.display = 'none';
+  }).catch(function(error) {
+    document.getElementsByClassName('introduce')[0].style.display = 'none';
+  });
+};
+
+const logout = function() {
+  axios.defaults.headers.common['x-jwt-token'] = null;
+  localStorage.removeItem('x-jwt-token');
+  window.location.href = '/';
+};
+
+loginCheck();
