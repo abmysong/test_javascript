@@ -86,10 +86,6 @@ a {
   color: #808080;
 }
 
-.header_wrap .header_top .inner .introduce form button:hover {
-  color: #000;
-}
-
 .header_wrap .header_top .inner .search {
   width: 25%;
   text-align: end;
@@ -175,19 +171,25 @@ section {
   flex: 1;
 }
 
-.section_wrap .inner .join_wrap {
+section .inner form div {
   text-align: center;
-  border: 1px solid #808080;
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
-.section_wrap .inner .join_wrap form table {
-  margin: 0 auto;
+section .inner form {
+  position: relative;
 }
 
-.section_wrap .inner .join_wrap form button {
-  width: 90px;
+section .inner form div textarea {
+  resize: none;
+}
+
+section .inner form button {
+  width: 30px;
   height: 30px;
+  position: absolute;
+  right: 140px;
+
 }
 
 /* FOOTER */

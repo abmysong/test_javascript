@@ -66,18 +66,32 @@ a {
   color: #000;
 }
 
-.header_wrap .header_top .inner .point {
-  width: 20%;
+.header_wrap .header_top .inner .introduce {
+  width: 25%;
   text-align: center;
   line-height: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.header_wrap .header_top .inner .point p {
+.header_wrap .header_top .inner .introduce p {
+  color: #808080;
+  margin-right: 25px;
+}
+
+.header_wrap .header_top .inner .introduce form button {
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
   color: #808080;
 }
 
+.header_wrap .header_top .inner .introduce form button:hover {
+  color: #000;
+}
+
 .header_wrap .header_top .inner .search {
-  width: 30%;
+  width: 25%;
   text-align: end;
 }
 
