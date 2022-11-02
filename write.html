@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/write.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/login.js"></script>
   <script src="./js/write.js"></script>
 </head>
 <body>
@@ -94,12 +96,12 @@
     <section>
       <div class="section_wrap">
         <div class="inner">
-          <form>
+          <form onsubmit="event.preventDefault();">
             <div>
-              <textarea name="" id="" cols="100" rows="3" placeholder="제목"></textarea>
-              <textarea name="" id="" cols="100" rows="10" placeholder="내용"></textarea>
+              <input type="text" name="title">
+              <textarea name="content" id="" cols="100" rows="10" placeholder="내용"></textarea>
             </div>
-            <button>작성</button>
+            <button onclick="boardsCreate(this);">작성</button>
           </form>
         </div>
       </div>
