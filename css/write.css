@@ -171,25 +171,41 @@ section {
   flex: 1;
 }
 
-section .inner form div {
-  text-align: center;
-  margin-top: 25px;
-}
-
 section .inner form {
   position: relative;
 }
 
+section .inner form div {
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+section .inner form div input{
+  margin-bottom: 5px;
+}
+
 section .inner form div textarea {
   resize: none;
+  margin-bottom: 5px;
 }
 
 section .inner form button {
+  position: absolute;
   width: 30px;
   height: 30px;
-  position: absolute;
-  right: 140px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #808080;
+  color: #808080;
+  outline: 0;
+  cursor: pointer;
+}
 
+section .inner form button:hover {
+  border: 1px solid #000;
+  color: #000;
 }
 
 /* FOOTER */
