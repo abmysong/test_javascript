@@ -6,6 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/board.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
   <script src="./js/board.js"></script>
   <script src="./js/login.js"></script>
 </head>
@@ -116,28 +117,19 @@
                 <th>작성자</th>
                 <th>작성시간</th>
               </tr>
-              <tr>
-                <td><input type="checkbox" name="select-box" value="3"></td>
-                <td>3</td>
-                <td>게시글입니다</td>
-                <td>홍길동</td>
-                <td>2022-10-05</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="select-box" value="2"></td>
-                <td>2</td>
-                <td>공지사항</td>
-                <td>홍길동</td>
-                <td>2022-10-02</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="select-box" value="1"></td>
-                <td>1</td>
-                <td>이벤트입니다</td>
-                <td>홍길동</td>
-                <td>2022-10-01</td>
-              </tr>
             </thead>
+            <tbody id="tbody-parent"></tbody>
+          </table>
+          <table style="display: none;">
+            <tbody>
+              <tr id="tr-child">
+                <td><input type="checkbox" name="select-box" value="1"></td>
+                <td><a name="a-index" href=""></a></td>
+                <td><a name="a-title" href=""></a></td>
+                <td name="td-id"></td>
+                <td name="td-create-at"></td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -168,3 +160,6 @@
   </div>
 </body>
 </html>
+<script>
+  boardsRead();
+</script>
