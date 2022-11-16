@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/board.css">
+  <link rel="stylesheet" href="./css/update.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://momentjs.com/downloads/moment.js"></script>
-  <script src="./js/board.js"></script>
   <script src="./js/login.js"></script>
+  <script src="./js/update.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -102,33 +101,13 @@
     <section>
       <div class="section_wrap">
         <div class="inner">
-          <a href="./write.html">C</a>
-          <a href="./board.html">R</a>
-          <a href="./update.html">U</a>
-          <button>D</button>
-          <table>
-            <thead>
-              <tr>
-                <th><input type="checkbox" name="select-box" value="select-all" onclick="selectAll(this);"></th>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성시간</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-parent"></tbody>
-          </table>
-          <table style="display: none;">
-            <tbody>
-              <tr id="tr-child">
-                <td><input type="checkbox" name="select-box" value="1"></td>
-                <td><a name="a-index" href=""></a></td>
-                <td><a name="a-title" href=""></a></td>
-                <td name="td-id"></td>
-                <td name="td-create-at"></td>
-              </tr>
-            </tbody>
-          </table>
+          <form onsubmit="event.preventDefault();">
+            <div>
+              <input type="text" name="title" placeholder="제목">
+              <textarea name="content" id="" cols="100" rows="10" placeholder="내용"></textarea>
+            </div>
+            <button onclick="boardsCreate(this);">수정</button>
+          </form>
         </div>
       </div>
     </section>
@@ -158,6 +137,3 @@
   </div>
 </body>
 </html>
-<script>
-  boardsRead();
-</script>

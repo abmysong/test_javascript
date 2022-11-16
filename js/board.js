@@ -15,7 +15,7 @@ const boardsRead = function() {
       const board = response.data.boards[index];
       const newTrChild = trChild.cloneNode(true);
       tbodyParent.appendChild(newTrChild);
-      document.getElementsByName('a-index')[index].innerHTML = board.board_pk;
+      document.getElementsByName('a-index')[index].innerHTML = board.board_pk + 1;
       document.getElementsByName('a-index')[index].href = './detail.html?board_pk=' + board.board_pk;
       document.getElementsByName('a-title')[index].innerHTML = board.title;
       document.getElementsByName('a-title')[index].href = './detail.html?board_pk=' + board.board_pk;
