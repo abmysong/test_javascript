@@ -110,10 +110,10 @@
             <thead>
               <tr>
                 <th><input type="checkbox" name="select-box" value="select-all" onclick="selectAll(this);"></th>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성시간</th>
+                <th>번호<a href="?orderBy=board_pk&orderByType=asc">🔼</a><a href="?orderBy=board_pk&orderByType=desc">🔽</a></th>
+                <th>제목<a href="?orderBy=title&orderByType=asc">🔼</a><a href="?orderBy=title&orderByType=desc">🔽</a></th>
+                <th>작성자<a href="?orderBy=content&orderByType=asc">🔼</a><a href="?orderBy=content&orderByType=desc">🔽</a></th>
+                <th>작성시간<a href="?orderBy=create_at&orderByType=asc">🔼</a><a href="?orderBy=create_at&orderByType=desc">🔽</a></th>
               </tr>
             </thead>
             <tbody id="tbody-parent"></tbody>

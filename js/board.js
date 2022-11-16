@@ -1,3 +1,7 @@
+const searchParams = new URLSearchParams(window.location.search);
+const orderBy = searchParams.get('orderBy') || 'board_pk';
+const orderByType = searchParams.get('orderByType') || 'desc';
+
 const selectAll = function(selectAll) {
   const checkboxes = document.getElementsByName('select-box');
   checkboxes.forEach(function(checkbox) {
@@ -6,7 +10,7 @@ const selectAll = function(selectAll) {
 };
 
 const boardsRead = function() {
-  axios.get('http://localhost:3000/api/boards').then(function(response) {
+  axios.get('http://localhost:3000/api/boards?orderBy=' + orderBy + '&orderByType=' + orderByType).then(function(response) {
     const tbodyParent = document.getElementById('tbody-parent');
     tbodyParent.innerHTML = '';
     const trChild = document.getElementById('tr-child');
