@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/update.css">
+  <link rel="stylesheet" href="./css/detail.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/login.js"></script>
   <script src="./js/detail.js"></script>
-  <script src="./js/update.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -104,11 +103,11 @@
         <div class="inner">
           <form onsubmit="event.preventDefault();">
             <div>
-              <input type="text" name="title" placeholder="제목">
-              <textarea name="content" id="" cols="100" rows="10" placeholder="내용"></textarea>
+              <input type="text" name="title" placeholder="제목" readonly>
+              <textarea name="content" id="" cols="100" rows="10" placeholder="내용" readonly></textarea>
             </div>
-            <button onclick="boardsDelete();" style="margin-right: 40px;">삭제하기</button>
-            <button onclick="boardsUpdate(this);">수정하기</button>
+            <button onclick="cancel();" style="margin-right: 40px;">취소</button>
+            <button onclick="update();">수정</button>
           </form>
         </div>
       </div>

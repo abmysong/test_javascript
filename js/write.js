@@ -13,7 +13,7 @@ const boardsCreate = function(button) {
     content: form['content'].value
   }).then(function(response) {
     alert('글이 정상적으로 작성되었습니다.');
-    window.location.href = "/board.html";
+    window.location.href = "./board.html";
   }).catch(function(error) {
     alert(error.response.data.message);
   });
